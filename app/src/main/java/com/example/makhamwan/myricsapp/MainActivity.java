@@ -1,5 +1,6 @@
 package com.example.makhamwan.myricsapp;
 
+import android.graphics.drawable.ColorDrawable;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -117,6 +118,8 @@ public class MainActivity extends AppCompatActivity {
                                  Bundle savedInstanceState) {
             if (getArguments().getInt(ARG_SECTION_NUMBER)==1) {
                 View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+                TextView textView = (TextView) rootView.findViewById(R.id.section_label);
+                textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
                 return rootView;
             } else if (getArguments().getInt(ARG_SECTION_NUMBER)==2) {
                 View rootView = inflater.inflate(R.layout.fragment_main, container, false);
