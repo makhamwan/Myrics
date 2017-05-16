@@ -153,7 +153,7 @@ public class MainActivity extends AppCompatActivity {
                 case 1:
                     return "My favorite";
                 case 2:
-                    return "New song";
+                    return "New Song";
             }
             return null;
         }
