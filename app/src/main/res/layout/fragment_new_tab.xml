@@ -16,6 +16,17 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <TextView
+                android:id="@+id/add_new_song"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="64px"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Add new song"
+                android:textSize="30sp" />
+
+            <View style="@style/Divider"/>
+
             <EditText
                 android:id="@+id/url"
                 style="@android:style/Widget.Holo.EditText"
@@ -24,11 +35,11 @@
                 android:layout_marginLeft="64px"
                 android:layout_marginRight="64px"
                 android:layout_marginTop="64px"
-                android:hint="Url"
+                android:hint="url"
                 android:inputType="textPersonName"
                 android:lineSpacingExtra="10sp"
                 android:padding="64px"
-                android:textSize="20sp" />
+                android:textSize="18sp" />
 
             <EditText
                 android:id="@+id/title"
@@ -38,11 +49,11 @@
                 android:layout_marginLeft="64px"
                 android:layout_marginRight="64px"
                 android:layout_marginTop="64px"
-                android:hint="Title"
+                android:hint="title"
                 android:inputType="textPersonName"
                 android:lineSpacingExtra="10sp"
                 android:padding="64px"
-                android:textSize="20sp" />
+                android:textSize="18sp" />
 
             <EditText
                 android:id="@+id/artist"
@@ -52,11 +63,11 @@
                 android:layout_marginLeft="64px"
                 android:layout_marginRight="64px"
                 android:layout_marginTop="64px"
-                android:hint="Artist"
+                android:hint="artist"
                 android:inputType="textPersonName"
                 android:lineSpacingExtra="10sp"
                 android:padding="64px"
-                android:textSize="20sp" />
+                android:textSize="18sp" />
 
             <EditText
                 android:id="@+id/album"
@@ -66,33 +77,34 @@
                 android:layout_marginLeft="64px"
                 android:layout_marginRight="64px"
                 android:layout_marginTop="64px"
-                android:hint="Album"
+                android:hint="album"
                 android:inputType="textPersonName"
                 android:lineSpacingExtra="10sp"
                 android:padding="64px"
-                android:textSize="20sp" />
+                android:textSize="18sp" />
 
             <EditText
                 android:id="@+id/lyric"
                 style="@android:style/Widget.Holo.EditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="64px"
                 android:layout_marginLeft="64px"
                 android:layout_marginRight="64px"
                 android:layout_marginTop="64px"
-                android:hint="Lyric"
+                android:hint="lyric"
                 android:inputType="textMultiLine"
                 android:lineSpacingExtra="10sp"
                 android:padding="64px"
-                android:textSize="20sp" />
+                android:textSize="18sp" />
+
+            <View style="@style/Divider"/>
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/add_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="128px"
-                android:layout_marginRight="128px"
-                android:layout_marginTop="128px"
+                android:layout_margin="64px"
                 android:background="@color/colorAccent"
                 android:padding="64px"
                 android:text="Add+"
