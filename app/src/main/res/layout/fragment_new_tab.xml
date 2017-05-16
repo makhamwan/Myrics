@@ -1,13 +1,105 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="layout.new_tab">
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    >
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
 
-</FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/url"
+                style="@android:style/Widget.Holo.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="64px"
+                android:layout_marginRight="64px"
+                android:layout_marginTop="64px"
+                android:hint="Url"
+                android:inputType="textPersonName"
+                android:lineSpacingExtra="10sp"
+                android:padding="64px"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/title"
+                style="@android:style/Widget.Holo.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="64px"
+                android:layout_marginRight="64px"
+                android:layout_marginTop="64px"
+                android:hint="Title"
+                android:inputType="textPersonName"
+                android:lineSpacingExtra="10sp"
+                android:padding="64px"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/artist"
+                style="@android:style/Widget.Holo.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="64px"
+                android:layout_marginRight="64px"
+                android:layout_marginTop="64px"
+                android:hint="Artist"
+                android:inputType="textPersonName"
+                android:lineSpacingExtra="10sp"
+                android:padding="64px"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/album"
+                style="@android:style/Widget.Holo.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="64px"
+                android:layout_marginRight="64px"
+                android:layout_marginTop="64px"
+                android:hint="Album"
+                android:inputType="textPersonName"
+                android:lineSpacingExtra="10sp"
+                android:padding="64px"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/lyric"
+                style="@android:style/Widget.Holo.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="64px"
+                android:layout_marginRight="64px"
+                android:layout_marginTop="64px"
+                android:hint="Lyric"
+                android:inputType="textMultiLine"
+                android:lineSpacingExtra="10sp"
+                android:padding="64px"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="128px"
+                android:layout_marginRight="128px"
+                android:layout_marginTop="128px"
+                android:background="@color/colorAccent"
+                android:padding="64px"
+                android:text="Add+"
+                android:textAlignment="center"
+                android:textColor="@android:color/background_light" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
