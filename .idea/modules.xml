@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Myrics.iml" filepath="$PROJECT_DIR$/Myrics.iml" />
       <module fileurl="file://$PROJECT_DIR$/MyricsApp.iml" filepath="$PROJECT_DIR$/MyricsApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
