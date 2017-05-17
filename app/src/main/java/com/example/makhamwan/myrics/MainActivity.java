@@ -1,4 +1,4 @@
-package com.example.makhamwan.myricsapp;
+package com.example.makhamwan.myrics;
 
 import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -11,12 +11,19 @@ import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-
+import com.example.makhamwan.myricsapp.R;
+import com.firebase.client.Firebase;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 public class MainActivity extends AppCompatActivity {
-
     private SectionsPagerAdapter mSectionsPagerAdapter;
-
     private ViewPager mViewPager;
+
+    private Firebase mRootRef;
+    private DatabaseReference mDatabaseRef;
+    private StorageReference mStorageRef;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +39,14 @@ public class MainActivity extends AppCompatActivity {
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
+
+        Firebase.setAndroidContext(this);
+
+        mDatabaseRef = FirebaseDatabase.getInstance().getReference();
+        // .push = not to replace lastest one.
+        mRootRef = new Firebase("https://myrics-e3273.appspot.com/").child("Songs").push();
+        mStorageRef = FirebaseStorage.getInstance().getReferenceFromUrl("gs://myrics-e3273.appspot.com/");
+
     }
 
 
@@ -90,5 +105,9 @@ public class MainActivity extends AppCompatActivity {
             }
             return null;
         }
+    }
+
+    public StorageReference getStorageRef() {
+        return this.mStorageRef;
     }
 }
